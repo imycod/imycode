@@ -14,3 +14,9 @@
 |  [str\_ensure\_prefix(s, prefix)](./helper.str_ensure_prefix.md) | 函数“str\_ensure\_prefix”确保给定的字符串具有指定的前缀。 |
 |  [str\_ensure\_suffix(s, suffix)](./helper.str_ensure_suffix.md) |  |
 
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [addMethod](./helper.addmethod.md) | 函数“addMethod”向对象添加新方法，同时保留任何具有相同名称的现有方法的功能。 |
+

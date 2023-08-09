@@ -1,6 +1,6 @@
 {
   "name": "@imycode/helper",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -8,10 +8,10 @@
   "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imycode/@imycode/helper"
+    "url": "https://github.com/imycod/imycode"
   },
-  "bugs": "https://github.com/imycode/@imycode/helper/issues",
-  "homepage": "https://github.com/imycode/@imycode/helper#readme",
+  "bugs": "https://github.com/imycod/imycode/issues",
+  "homepage": "https://github.com/imycod/imycode",
   "scripts": {
     "lint": "eslint --ext .js,.ts ./",
     "build": "rollup -c",
@@ -22,7 +22,8 @@
     "test": "vitest",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "publish": "npm publish --access=public"
   },
   "keywords": [],
   "sideEffects": false,

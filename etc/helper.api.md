@@ -4,6 +4,11 @@
 
 ```ts
 
+// Warning: (ae-forgotten-export) The symbol "paramsObj" needs to be exported by the entry point index.d.ts
+//
+// @public
+export const addMethod: (object: paramsObj, name: string, fn: Function) => void;
+
 // @public
 export function arr_unique<T>(arr: T[]): T[];
 
