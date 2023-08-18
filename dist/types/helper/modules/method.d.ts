@@ -18,5 +18,24 @@ interface paramsObj {
  * ```
  */
 declare const addMethod: (object: paramsObj, name: string, fn: Function) => void;
+/**
+ * 重载函数
+ * @beta
+ * @param {Function} fn - 参数“fn”是一个函数，它将作为方法添加到“对象”中。
+ * @returns 函数“overload”没有 return 语句。因此，它不会显式返回任何内容。
+ * @example
+ * ```ts
+ * const fn = overload(
+ *    (a: number) => a,
+ *    (a: string) => a,
+ *    (a: boolean) => a,
+ * );
+ * fn(1)
+ * fn('1')
+ * fn(true)
+ * ```
+ * @example
+ **/
+declare function overload<T extends (...args: any[]) => any>(...fns: T[]): T;
 
-export { addMethod };
+export { addMethod, overload };

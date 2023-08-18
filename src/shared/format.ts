@@ -1,5 +1,5 @@
 /**
- *  “moneyFormat”函数用于将数字格式化为具有指定小数位数和千位分隔符的货币值。 
+ *  "formatMoney”函数用于将数字格式化为具有指定小数位数和千位分隔符的货币值。 
  * @public
  * @param money 
  * @param len 
@@ -7,10 +7,10 @@
  * @returns 
  * @example
  * ```js
- * moneyFormat(123456789.123456) // 123,456,789.12
+ * formatMoney(123456789.123456) // 123,456,789.12
  * ```
  */
-function moneyFormat(money, len = 2, separator = ',', curency = '￥') {
+function formatMoney(money:any, len = 2, separator = ',', curency = '￥') {
     len = len || 2
     if (!money && money !== 0) return ''
     if (isNaN(+money)) return ''
@@ -27,6 +27,7 @@ function moneyFormat(money, len = 2, separator = ',', curency = '￥') {
     return curency + money
 }
 
+
 export {
-    moneyFormat
+    formatMoney
 }

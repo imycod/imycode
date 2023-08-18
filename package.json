@@ -1,6 +1,6 @@
 {
   "name": "@imycode/helper",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -23,7 +23,8 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "publish": "npm publish --access=public"
+    "publish": "npm publish",
+    "publish:public": "npm publish --access=public"
   },
   "keywords": [],
   "sideEffects": false,
@@ -37,7 +38,9 @@
   "author": "wuxs <317009160@qq.com>",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "dist/esm/directives",
+    "dist/esm/helper"
   ],
   "devDependencies": {
     "@babel/core": "^7.22.5",

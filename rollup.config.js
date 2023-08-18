@@ -1,3 +1,11 @@
+/*
+ * @Author: wuxs 317009160@qq.com
+ * @Date: 2023-08-09 14:49:38
+ * @LastEditors: wuxs 317009160@qq.com
+ * @LastEditTime: 2023-08-18 14:35:13
+ * @FilePath: \vue3-plugin-effect-vite-admin-element-plusd:\studio\imycode\rollup.config.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { defineConfig } from 'rollup'
 import ts from 'rollup-plugin-typescript2'
 import commonjs from '@rollup/plugin-commonjs'
@@ -32,10 +40,10 @@ const config = defineConfig([
         ],
     },
     {
-        input: 'src/index.ts',
+        input: 'src/helper/index.ts',
         output: [
             {
-                file: 'dist/umd/index.js',
+                file: 'dist/umd/helper/index.js',
                 format: 'umd',
                 name: '/helper',
             },
@@ -51,6 +59,27 @@ const config = defineConfig([
             terser(),
         ],
     },
+    {
+        input: 'src/directives/index.ts',
+        output: [
+            {
+                file: 'dist/umd/directives/index.js',
+                format: 'umd',
+                name: '/directives',
+            },
+        ],
+        plugins: [
+            importExportPlugin(),
+            ts(),
+            babelPlugin({ exclude: '**/node_modules/**' }),
+            commonjs(),
+            resolve({ preferBuiltins: true, mainFields: ['browser'] }),
+            globals(),
+            builtins(),
+            terser(),
+        ],
+    },
+    // types
     {
         input: 'src/index.ts',
         output: {
